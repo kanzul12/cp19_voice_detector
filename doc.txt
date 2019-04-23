@@ -1,0 +1,15 @@
+Group Members :
+
+1. Kanz-ul-eman (leader)
+2. Sana
+3. Isha
+4. Neha
+5. Muskan
+
+Objective :
+
+1. searching of Raspberrypi (By Isha )
+2. operating system of Raspberrypi (By neha )
+3. Working of LEDS by using Respberrypi (By muskan )
+4. study of speech to text libraries ( By kanz ul eman )
+5. providing of power supply  (By sana )
