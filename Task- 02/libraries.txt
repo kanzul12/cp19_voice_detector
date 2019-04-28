@@ -1,0 +1,10 @@
+LIBRARIES:
+
+
+SPEECH RECOGNITION IN PYTHON USING GOOGLE SPEECH API:
+
+1. PYTHON SpeechRecognition module:
+
+2. PyAudio:
+
+
