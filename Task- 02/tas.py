@@ -1,3 +1,4 @@
+Python 2.x program to transcribe an Audio file 
 import speech_recognition as sr 
   
 AUDIO_FILE = ("example.wav") 
