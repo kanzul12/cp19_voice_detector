@@ -3,7 +3,6 @@ import speech_recognition as sr
   
 AUDIO_FILE = ("example.wav") 
   
-# use the audio file as the audio source 
   
 r = sr.Recognizer() 
   
