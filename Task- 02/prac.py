@@ -1,13 +1,10 @@
-# import library
+count=0
+a=input("enter= ") 
+for i in a :
+    if i == " ":
+        count+=1
+        print("the counting is:" + str(count))
 
-import string
-import speech
 
-while True:
-    print "Talk:"
-    phrase = speech.input()
-    speech.say("You said %s" % phrase)
-    print "You said {0}".format(phrase)
-    #if phrase == "turn off":
-    if phrase.lower() == "goodbye":
-        break
+
+    
