@@ -1,5 +1,5 @@
 final librares:
 
+
 1.speechRecognition with python
 2. pyAudio
-
