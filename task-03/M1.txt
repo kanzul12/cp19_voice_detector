@@ -1,0 +1,18 @@
+
+                                          WORKING OF LED's AND SPEECH TO TEXT
+
+Library searched to work with in our Project:
+1. Python Speech to Text
+2. Voice Recognition
+3. PyAudio
+4. Google Voice (Speech to Text)
+5. Microsoft Voice (Speech to text)
+
+Youtube Videos Watched in search for libraries:
+1. https://www.youtube.com/watch?v=N8mNHKbTmwg (Speech to text)
+2. https://www.youtube.com/watch?v=8iAWfEPiz9I (Voice Recognition)
+3. https://www.youtube.com/watch?v=OaOvnizLd5o (Woking of LED's in RaspberryPi)
+4. https://www.youtube.com/watch?v=w_z0BUkzbIg (Video regardin the whole project)
+5. https://www.youtube.com/watch?v=w_z0BUkzbIg (GPIO Control in RaspberryPi)
+6. https://www.youtube.com/watch?v=WLo5Rgvj6qo (GPIO Basics with LED Lights)
+7. https://www.engineersgarage.com/embedded/raspberry-pi/voice-control (Image Tutorial For the working of LED's in RaspberryPi)
