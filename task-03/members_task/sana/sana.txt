@@ -1,0 +1,114 @@
+topic:
+
+Audio Input and Output from USB Microphone + Raspberry Pi
+and dicuss on pyaudio libary
+
+Materials use description :
+USB Microphone
+Raspberry Pi
+Speaker for audio output
+
+and we use sub libary pyaudio for this
+PyAudio: Used to play and record audio on a variety of platforms. Install it by typing pip install pyaudio into the terminal
+
+reference code of in stalling pyaudio
+
+import pyaudio
+import wave
+import os
+reference code of in stalling pyaudio
+
+#The following code comes from markjay4k as referenced below
+form_1 = pyaudio.paInt16
+chans=1
+samp_rate = 44100
+chunk = 4096
+record_secs = 1     #record time
+dev_index = 2
+wav_output_filename = 'test1.wav'
+
+
+audio = pyaudio.PyAudio()
+
+#setup audio input stream
+stream=audio.open(format = form_1,rate=samp_rate,channels=chans, input_device_index = dev_index, input=True, frames_per_buffer=chunk)
+print("recording")
+frames=[]
+
+
+
+youtube video seen by me for reference
+
+for ii in range(0,int((samp_rate/chunk)*record_secs)):
+    data=stream.read(chunk,exception_on_overflow = False)
+    frames.append(data)
+
+print("finished recording")
+
+stream.stop_stream()
+stream.close()
+audio.terminate()
+
+#creates wave file with audio read in
+#Code is from the wave file audio tutorial as referenced below
+wavefile=wave.open(wav_output_filename,'wb')
+wavefile.setnchannels(chans)
+wavefile.setsampwidth(audio.get_sample_size(form_1))
+wavefile.setframerate(samp_rate)
+wavefile.writeframes(b''.join(frames))
+wavefile.close()
+
+#plays the audio file
+os.system("aplay test1.wav")
+Copy the following Python script for simultaneously streaming audio output with input:
+
+import pyaudio
+import numpy as np
+
+#The following code comes from markjay4k as referenced below
+
+chunk=4096
+RATE=44100
+
+p=pyaudio.PyAudio()
+
+
+
+
+
+
+
+
+stream=p.open(format = pyaudio.paInt16,rate=RATE,channels=1, input_device_index = 2, input=True, frames_per_buffer=chunk)
+
+#the code below is from the pyAudio library documentation referenced below
+#output stream setup
+player=p.open(format = pyaudio.paInt16,rate=RATE,channels=1, output=True, frames_per_buffer=chunk)
+
+while True:            #Used to continuously stream audio
+     data=np.fromstring(stream.read(chunk,exception_on_overflow = False),dtype=np.int16)
+     player.write(data,chunk)
+    
+#closes streams
+stream.stop_stream()
+stream.close()
+p.terminate
+
+
+
+
+
+
+youtube video seen by me for reference
+
+https://www.youtube.com/watch?v=WpkPbYf487I&feature=youtu.be&fbclid=IwAR1hbKtaXkZ7rwezwJCkB-qQ77xaSqCPFowrUI9Zvuu30WWTXytr8FSOzVk
+https://www.youtube.com/watch?v=CeFWBzzcj8o&feature=youtu.be&fbclid=IwAR0ax9fm4npaSnlX1RDd2R68NgjtycTgOv45PZ9ujMoq6p4MTYJisuSE-cs
+
+
+visit page for learning pyaudio working
+https://people.csail.mit.edu/hubert/pyaudio/docs/?fbclid=IwAR04mf-HBAIVp8Nuozl3V8EyszZyKTi9uOlHgXnp00MgUsoaNvGTC3MaosI
+
+
+
+
+
