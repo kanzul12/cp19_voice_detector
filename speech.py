@@ -8,7 +8,6 @@ with sr.Microphone() as source:
     audio =r.listen(source)
     print('done')
    
-   
 try:
     text = r.recognize_google(audio)
     print('google think you said:\n'+text)
