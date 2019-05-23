@@ -1,0 +1,53 @@
+LIBRARIES IMPORT:
+
+1.Speech recognition
+
+2.Time library
+
+
+
+
+SPEECH RECOGNITION:
+
+PATH TO IMPORT LIBRARIES:
+
+speech recognition:
+
+Go to command prompt,write path
+
+"pip install SpeechRecognition"
+
+And the library start dowloading and after completion of downloading the messege displayed successfully installed then use library easily.
+
+
+time library:
+
+
+Go to command prompt,write path
+
+
+"pip install time library"
+
+
+And the library start dowloading and after completion of downloading the messege displayed successfully installed then use library easily.
+
+
+
+This is the method to importing libraries and by completing these we can easily using libraries without any importing problem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
