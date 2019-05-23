@@ -1,0 +1,33 @@
+What is Rasberry pi and how does it work?
+How Does the Raspberry Pi Work? Here's how it works: An SD card inserted into the slot on the board acts as the hard drive for the Raspberry Pi. It is powered by USB and the video output can be hooked up to a traditional RCA TV set, a more modern monitor, or even a TV using the HDMI port.
+=================================================================================================================================================================================================================================================================================================
+
+What is the function of rasberry pi?
+The Raspberry Pi is a very cheap computer that runs Linux, but it also provides a set of GPIO (general purpose input/output) pins that allow you to control electronic components for physical computing and explore the Internet of Things (IoT).
+==================================================================================================================================================================================================================================================
+
+What is rasberry pi 3 used for?
+The Raspberry Pi FoundationÂ just released the Raspberry Pi 3. It's a full computer, as small as a credit card, and can be purchased from online sites includingÂ Element14 and RS Components. Its specs include 1.2GHz 64-bit quad-core ARM Cortex-A53 CPU, 802.11n Wi-Fi, and Bluetooth
+=========================================================================================================================================================================================================================================================================================
+
+What can I do with rasberry pi?
+Desktop PC. Let's start with the simplest use for a Raspberry Pi: a desktop computer. ...
+Wireless Print Server. ...
+Add AirPrint Support to Your Pi Print Server. ...
+Media Center. ...
+Retro Gaming Machine.
+Minecraft Game Server.
+Robot Controller.
+Stop Motion Camera.
+speech recognition
+object detection
+==================================================================================================================
+
+How powerful is a rasberry pi?
+The new Raspberry Pi 3 is the fastest and most powerful device the Raspberry Pi Foundation has released to date. It comes with a 1.2GHz quad-core ARM Cortex-A53 and 1GB LPDDR2 RAM. It's no slouch, especially compared to earlier Pi models, but it's also not nearly as powerful as your modern, high-end smartphone
+===========================================================================================================================================================================================================================================================================================================================
+
+How big is a rasberry pi?
+65mm x 30mm
+The Raspberry Pi Zero is obviously less powerful than the Raspberry Pi 2, but that's made up for in the price. Still, it's pretty powerful all things considered. Here's what's packed inside the 65mm x 30mm board: BCM2835 chip (same as Pi 1) but up-clocked to 1GHz.
+========================================================================================================================================================================================================================================================================
