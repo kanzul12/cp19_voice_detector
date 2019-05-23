@@ -1,0 +1,20 @@
+EXAMPLES OF TIME LIBRARY:
+
+In this project we use time.sleep() function to stop or pause duration of speech to display on screen.
+
+
+1.
+import time
+
+print "Start : %s" % time.ctime()
+time.sleep( 5 )
+print "End : %s" % time.ctime()
+
+
+2.
+
+for count in range(5):
+    print(time.ctime())
+    # Prints the current time with a five second difference
+    time.sleep(5)
+
