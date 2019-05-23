@@ -1,0 +1,41 @@
+The Python Standard Library
+While The Python Language Reference describes the exact syntax and semantics of the Python language, this library reference manual describes the standard library that is distributed with Python. It also describes some of the optional components that are commonly included in Python distributions.
+
+Python’s standard library is very extensive, offering a wide range of facilities as indicated by the long table of contents listed below. The library contains built-in modules (written in C) that provide access to system functionality such as file I/O that would otherwise be inaccessible to Python programmers, as well as modules written in Python that provide standardized solutions for many problems that occur in everyday programming. Some of these modules are explicitly designed to encourage and enhance the portability of Python programs by abstracting away platform-specifics into platform-neutral APIs.
+
+The Python installers for the Windows platform usually include the entire standard library and often also include many additional components. For Unix-like operating systems Python is normally provided as a collection of packages, so it may be necessary to use the packaging tools provided with the operating system to obtain some or all of the optional components.
+
+
+Working with Modules in Python
+Modules enable you to split parts of your program in different files for easier maintenance and better performance.
+As a beginner, you start working with Python on the interpreter, later when you need to write longer programs you start writing scripts. As your program grows more in the size you may want to split it into several files for easier maintenance as well as reusability of the code. The solution to this is Modules. You can define your most used functions in a module and import it, instead of copying their definitions into different programs. A module can be imported by another program to make use of its functionality. This is how you can use the Python standard library as well.
+
+Simply put, a module is a file consisting of Python code. It can define functions, classes, and variables, and can also include runnable code. Any Python file can be referenced as a module. A file containing Python code, for example: test.py, is called a module, and its name would be test.
+
+There are various methods of writing modules, but the simplest way is to create a file with a .py extension which contains functions and variables.
+
+Before you start writing your own modules, I recommend you take a look at our Intro to Python for Data Science course, which covers the basics of the Python programming language.
+
+This tutorial will guide you through writing your own Python modules. You are going to learn about the following topics:
+The import statement in Python
+Writing Modules
+More on import statements
+Module Search Path
+Byte Compiled Files
+The dir() function
+
+The import statement
+To use the functionality present in any module, you have to import it into your current program. You need to use the import keyword along with the desired module name. When interpreter comes across an import statement, it imports the module to your current program. You can use the functions inside a module by using a dot(.) operator along with the module name. First, let's see how to use the standard library modules. In the example below,math module is imported into the program so that you can use sqrt() function defined in it.
+
+
+What is a Python library and what can I use it for?
+Library : It is collection of modules.
+
+(Library either contains built in modules(written in C) + modules written in python).
+
+so, let us first understand what is a Module?
+
+Module : Each of a set of standardized parts or independent units that can be used to construct a more complex structure.
+
+Speaking in informal language, A module is set of lines of code which are used for a specific purpose and can be used in other programs as it is , to avoid DRY(Don’t Repeat Yourself) as a team and focusing on main requirement.
+
