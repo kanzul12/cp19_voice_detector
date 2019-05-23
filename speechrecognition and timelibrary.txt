@@ -1,0 +1,261 @@
+LIBRARIES:
+
+SPEECH RECOGNITION:
+
+Speech recognition is a computer software program or hardware device with the ability to decode the human voice. 
+
+
+To convert speech to on-screen text or a computer command, a computer has to go through several complex steps.
+ When you speak, you create vibrations in the air. 
+The analog-to-digital converter (ADC) translates this analog wave into digital data that the computer can understand. 
+To do this, it samples, or digitizes, the sound by taking precise measurements of the wave at frequent intervals. 
+The system filters the digitized sound to remove unwanted noise, and sometimes to separate it into different bands of frequency (frequency is the wavelength of the sound waves, heard by humans as differences in pitch).
+ It also normalizes the sound, or adjusts it to a constant volume level. It may also have to be temporally aligned.
+ People don't always speak at the same speed, so the sound must be adjusted to match the speed of the template sound samples already stored in the system's memory.
+
+ADC(analog-to-digital converter):
+
+An ADC translates the analog waves of your voice into digital data by sampling the sound. 
+The higher the sampling and precision rates, the higher the quality.
+
+Next the signal is divided into small segments as short as a few hundredths of a second, or even thousandths in the case of plosive consonant sounds -- consonant stops produced by obstructing airflow in the vocal tract -- like "p" or "t." The program then matches these segments to known phonemes in the appropriate language. A phoneme is the smallest element of a language -- a representation of the sounds we make and put together to form meaningful expressions. 
+There are roughly 40 phonemes in the English language (different linguists have different opinions on the exact number), while other languages have more or fewer phonemes.
+
+The next step seems simple, but it is actually the most difficult to accomplish and is the is focus of most speech recognition research. The program examines phonemes in the context of the other phonemes around them. It runs the contextual phoneme plot through a complex statistical model and compares them to a large library of known words, phrases and sentences. The program then determines what the user was probably saying and either outputs it as text or issues a computer command.
+
+Early speech recognition systems tried to apply a set of grammatical and syntactical rules to speech. If the words spoken fit into a certain set of rules, the program could determine what the words were. 
+
+However, human language has numerous exceptions to its own rules, even when it's spoken consistently. Accents, dialects and mannerisms can vastly change the way certain words or phrases are spoken. Imagine someone from Boston saying the word "barn." He wouldn't pronounce the "r" at all, and the word comes out rhyming with "John." Or consider the sentence, "I'm going to see the ocean." Most people don't enunciate their words very carefully. The result might come out as "I'm goin' da see tha ocean." They run several of the words together with no noticeable break, such as "I'm goin'" and "the ocean." Rules-based systems were unsuccessful because they couldn't handle these variations. This also explains why earlier systems could not handle continuous speech -- you had to speak each word separately, with a brief pause in between them.
+
+Today's speech recognition systems use powerful and complicated statistical modeling systems. These systems use probability and mathematical functions to determine the most likely outcome. According to John Garofolo, Speech Group Manager at the Information Technology Laboratory of the National Institute of Standards and Technology, the two models that dominate the field today are the Hidden Markov Model and neural networks. These methods involve complex mathematical functions, but essentially, they take the information known to the system to figure out the information hidden from it.
+
+Example is the phrase "recognize speech," which sounds a lot like "wreck a nice beach" when you say it very quickly. The program has to analyze the phonemes using the phrase that came before it in order to get it right. Here's a breakdown of the two phrases:
+
+r  eh k ao g n ay  z       s  p  iy  ch
+
+"recognize speech"
+
+r  eh  k     ay     n  ay s     b  iy  ch
+
+"wreck a nice beach"
+
+Why is this so complicated? If a program has a vocabulary of 60,000 words (common in today's programs), a sequence of three words could be any of 216 trillion possibilities. Obviously, even the most powerful computer can't search through all of them without some help.
+
+No speech recognition system is 100 percent perfect; several factors can reduce accuracy. Some of these factors are issues that continue to improve as the technology improves. Others can be lessened -- if not completely corrected -- by the user.
+
+The program needs to "hear" the words spoken distinctly, and any extra noise introduced into the sound will interfere with this. The noise can come from a number of sources, including loud background noise in an office environment. Users should work in a quiet room with a quality microphone positioned as close to their mouths as possible. Low-quality sound cards, which provide the input for the microphone to send the signal to the computer, often do not have enough shielding from the electrical signals produced by other computer components. They can introduce hum or hiss into the signal.
+
+
+CODING:
+
+import speech_recognition as sr 
+
+r = sr.Recognizer() 
+
+with sr.Microphone() as source: 
+
+print("Speak Anything :")
+
+audio = r.listen(source)
+
+try:
+
+text = r.recognize_google(audio) 
+
+print("You said : {}".format(text))
+
+except:
+
+print("Sorry could not recognize your voice")
+
+EXPLANATION OF CODING:
+
+1.first of all we will import speech_recognition as sr.
+
+2.Notice that we have speech_recognition in such  format  whereas earlier we have installed it in this way SpeechRecognition , so you need to have a look around the cases because this is case sensitive.
+
+3.Now we have used as notation  because writing speech_recognition whole every time is not a good way.
+
+4.Now we have to initialize r = sr.Recognizer() ,this will work as a recognizer to recognize our voice.
+
+5.So, with sr.Microphone() as source: which means that we are initialising our source to sr.Microphone ,we can also use some audio files to convert into text but in this tutorial i am using Microphone voice.
+
+6.Next we will print a simple statement that recommend the user to speak anything.
+
+7.Now we have to use r.listen(source) command and we have to listen the source.So, it will listen to the source and store it in the audio.
+
+8.It may happen some time the audio is not clear and you might not get it correctly ,so we can put it inside the try and except block .
+
+9.So inside the try block, our text will be text = r.recognize_google(audio) ,now we have various options like recognize_bing(),recognize_google_cloud(),recognize_ibm(), etc.But for this one i am using recognize_google().And lastly we have to pass our audio.
+And this will convert our audio into text.
+
+10.Now we just have to print print(“You said : {}”.format(text)) ,this will print whatever you have said.
+
+11.In the except block we can just write  print(“Sorry could not recognize your voice”) ,this will message you if your voice is not recorded clearly.
+
+
+TIME LIBRARAY:
+
+Time intervals are floating-point numbers in units of seconds. There is a popular time module available in Python which provides functions for working with times, and for converting between representations.
+
+Sometimes, there is a need to hault the flow of the program so that several other executions can take place or simply due to the utility required. sleep() can come handy in such a situation which provides an accurate and flexible way to hault the flow of code for any period of time. This function discusses the insight of this function.
+
+In this project, we use time.sleep() library for controlling time from starting to ending. 
+
+Python time.sleep():
+
+The time.sleep() takes as arguments the number of seconds you want the program to halt or to be suspended before it moves forward to the next step.
+
+Let's see this with the help of a simple program, where we simply output the current time with a halt of 5 seconds in between the next execution - hence introducing a difference of 5 seconds between each print of the current time. Using time.ctime() helps to see the local time in a nicely formatted version
+
+
+PROGRAM:
+
+for count in range(5):
+    print(time.ctime())
+    # Prints the current time with a five second difference
+    time.sleep(5)
+
+
+Time.sleep(sec) where sec is the argument that specifies the number of seconds the program is to be suspended for.
+ The function does not return any value.
+
+sec - The argument is actually a floating point number, hence you can make the sleep time more precise. However, this is a little doubtful cause the actual suspension time may be less than that requested time or arbitrarily longer. To understand why better, imagine the program being a problem or a task being handled by a different salesperson in a shop - when you suspend the program the person working on it is assigned another client immediately. But soon after (sooner than the specified sleep secs), another free salesperson takes up the task and goes on to complete it - hence the suspension time can be less. Similarly, the suspension time may be longer than requested by an arbitrary amount because of the scheduling of tasks for all salesperson in the shop, and hence the program has to wait for its turn. Internally, this is more complex of course, and many ways of handling this have been introduced already.
+
+PROGRAM:
+
+for count in range(3):
+    print(time.ctime())
+    # Prints the current time with a five second difference
+    time.sleep(2.5)
+
+Now we have examples regarding time library which are described below:
+
+
+CODING:
+
+import time
+
+print("This is printed immediately.")
+
+time.sleep(2.4)
+
+print("This is printed after 2.4 seconds.")
+
+
+EXAMPLES:
+
+1.
+
+# Python code to demonstrate 
+# working of sleep() 
+  
+import time 
+  
+# printing the start time  
+print("The time of code execution begin is : ", end ="") 
+print(time.ctime()) 
+  
+# using sleep() to hault the code execution 
+time.sleep(6) 
+  
+  
+# printing the end time  
+print("The time of code execution end is : ", end ="") 
+print(time.ctime())
+
+
+2.
+
+
+# Python code to demonstrate 
+# application of sleep() 
+  
+import time 
+  
+# initializing string  
+strn = "GeeksforGeeks"
+  
+# printing geeksforgeeks after delay 
+# of each character 
+for i in range(0, len(strn)): 
+    print(strn[i], end ="") 
+    time.sleep(2)
+
+
+APPLICATION FOR SLEEP():
+
+There are many applications that sleep() is used for. Be it execution of the background thread which is repeated at regular interval, this can be implemented with the help of sleep(). Another popular application is using sleep() to print the words letter by letter for good user interface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
